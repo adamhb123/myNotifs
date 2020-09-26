@@ -1,4 +1,4 @@
-__author__ = "Adam Brewer"
+a__author__ = "Adam Brewer"
 
 from selenium import webdriver
 import sqlite3, time, platform
