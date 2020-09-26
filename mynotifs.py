@@ -33,7 +33,7 @@ def load_cookies(wdriver: webdriver.Firefox=None,filename='lastsesh.cookies'):
     return cookies
 
 firefoxOptions = webdriver.FirefoxOptions()
-#firefoxOptions.headless = True
+firefoxOptions.headless = True
 driver = webdriver.Firefox(executable_path=
                            str(Path('./geckodriver.exe').absolute())
                            if 'windows' in OPSYS else str(Path('./geckodriver').absolute()),
