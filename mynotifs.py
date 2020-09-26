@@ -84,7 +84,7 @@ def grab_mc_notifs(driver: webdriver.Firefox):
         for line in f.readlines():
             found = False
             for n in nlist:
-                print("%s in %s?" % (n,str(line)))
+                #print("%s in %s?" % (n,str(line)))
                 if n.strip().lower().replace('\n','') == line.strip().lower().replace('\n',''):
                     found = True
                     break
