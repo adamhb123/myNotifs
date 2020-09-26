@@ -81,11 +81,11 @@ def grab_mc_notifs(driver: webdriver.Firefox):
     #   WOULD USE DB, CAN'T NOW NOT ENOUGH TIME
     #db.execute("INSERT INTO notifications VALUES (?)",n)
     
-    with open('pseudodb.txt', 'r') as f:
+    with open('pseudodb.txt', '') as f:
         if len(f.readlines()) == 0:
-            with open('pseudodb.txt', 'w') as f:
+            with open('pseudodb.txt', 'w') as c:
                 for n in nlist:
-                    f.write(f'{n}\n')
+                    c.write(f'{n}\n')
 
         for n in nlist:
             f.write(f'{n}\n')
