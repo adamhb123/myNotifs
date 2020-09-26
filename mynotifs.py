@@ -1,4 +1,4 @@
-a__author__ = "Adam Brewer"
+__author__ = "Adam Brewer"
 
 from selenium import webdriver
 import sqlite3, time, platform
@@ -81,7 +81,7 @@ def grab_mc_notifs(driver: webdriver.Firefox):
     #   WOULD USE DB, CAN'T NOW NOT ENOUGH TIME
     #db.execute("INSERT INTO notifications VALUES (?)",n)
     
-    with open('pseudodb.txt', '') as f:
+    with open('pseudodb.txt', 'r') as f:
         if len(f.readlines()) == 0:
             with open('pseudodb.txt', 'w') as c:
                 for n in nlist:
