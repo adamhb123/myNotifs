@@ -12,8 +12,8 @@ db.execute('''CREATE TABLE IF NOT EXISTS notifications
              (notification text)''')"""
 
 
-NOTIF_WAIT_TIME = 4
-SITE_WAIT_TIME = 6
+NOTIF_WAIT_TIME = 5
+SITE_WAIT_TIME = 8
 OPSYS = platform.system().lower()
 ICONDIR = Path('./icons').absolute()
 HOMEPAGE = "https://mycourses.rit.edu/d2l/home"
@@ -80,11 +80,20 @@ def grab_mc_notifs(driver: webdriver.Firefox):
             continue
     #   WOULD USE DB, CAN'T NOW NOT ENOUGH TIME
     #db.execute("INSERT INTO notifications VALUES (?)",n)
+    
+    with open('pseudodb.txt', 'r') as f:
+        if len(f.readlines()) == 0:
+            with open('pseudodb.txt', 'w') as f:
+                for n in nlist:
+                    f.write(f'{n}\n')
+
+        for n in nlist:
+            f.write(f'{n}\n')
     with open('pseudodb.txt','r') as f:
         for line in f.readlines():
             found = False
             for n in nlist:
-                #print("%s in %s?" % (n,str(line)))
+                print("%s in %s?" % (n,str(line)))
                 if n.strip().lower().replace('\n','') == line.strip().lower().replace('\n',''):
                     found = True
                     break
