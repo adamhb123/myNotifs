@@ -1,0 +1,3 @@
+py-notifier
+selenium
+win10toast
