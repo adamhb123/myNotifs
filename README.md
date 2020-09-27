@@ -5,6 +5,8 @@ RIT myCourses Desktop Notifications
 Pushes myCourses notifications to your desktop.
 ## Do you regret it?
 Yes. But also no. But yes.
+## Does it work?
+It did for five seconds. Then I broke it.
 ## Will you redo it?
 ..........Maybe
 ## Setup and Run
