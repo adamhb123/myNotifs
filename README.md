@@ -3,7 +3,10 @@
 RIT myCourses Desktop Notifications
 ## What does it do?
 Pushes myCourses notifications to your desktop.
-
+## Do you regret it?
+Yes. But also no. But yes.
+## Will you redo it?
+..........Maybe
 ## Setup and Run
 Install necessary python modules:
 ```bash
