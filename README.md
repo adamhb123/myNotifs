@@ -1,3 +1,4 @@
+# MADE FOR 9/26/20 CLAYHACK 8 HOUR HACKATHON
 # myNotifs
 RIT myCourses Desktop Notifications
 ## What does it do?
